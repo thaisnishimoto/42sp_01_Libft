@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 17:02:32 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/04 18:31:57 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/04 23:16:15 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,22 +28,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	else
 	{
-		i = n - 1;
-		while (i >= 0)
+		i = n;
+		while (i > 0)
 		{
-			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+			((unsigned char *)dest)[i - 1] = ((unsigned char *)src)[i - 1];
 			i--;
 		}
 	}
 	return (dest);
-}
-
-int	main(void)
-{
-        char    src[] = "fonte";
-        char    dest[] = "destino";
-
-        ft_memmove(dest, src, 4);
-        printf("%s\n", dest);
-	return (0);
 }

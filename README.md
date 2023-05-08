@@ -19,3 +19,6 @@
 16|`ft_strrchr`|returns pointer to last occurrence of character c in the string s|`char *ft_strrchr(const char *s, int c)`|`<string.h>`|
 17|`ft_strncmp`|compares two strings and returns a int that compares the ascii of the chars if they differ, up to size n|`int ft_strncmp(const char *s1, const char *s2, size_t n)`|`<string.h>`|
 18|`ft_memchr`|scans n bytes of memory for first instance of c, returns pointer to matching byte or NULL|`void *ft_memchr(const void *s, int c, size_t n)`|`<string.h>`|
+19|`ft_memcmp`|compares the first n bytes of memory areas s1 and s2|`int ft_memcmp(const void *s1, const void *s2, size_t n)`|`<string.h>`|
+20|`ft_strnstr`|returns pointer to first occurrence of little in big, no more than len is searched|`char *ft_strnstr(const char *big, const char *little, size_t len)`|`<bsd/string.h>`|
+21|`ft_atoi`|converts initial portion of string pointed to by nptr to int|`int ft_atoi(const char *nptr)`|`<stdlib.h>`|

@@ -1,11 +1,11 @@
 #Functions
 
-|Function|Description|Prototype|Original library|
+|Function - Part 1|Description|Prototype|Original library|
 1|`ft_isalpha`|checks for alphabetic character|`int ft_isalpha(int c)`|`<ctype.h>`|
 2|`ft_isdigit`|checks for digit 0 through 9|`int ft_isdigit(int c)`|`<ctype.h>`|
 3|`ft_isalnum`|checks for alphanumeric character|`int ft_isalnum(int c)`|`<ctype.h>`|
-4|`ft_isascii`|checks if	is ASCII character 0 to 127|`int ft_isascii(int c)`|`<ctype.h>`|
-5|`ft_isprint`|checks if	is ASCII character 32 to 126|`int ft_isprint(int c)`|`<ctype.h>`|
+4|`ft_isascii`|checks if is ASCII character 0 to 127|`int ft_isascii(int c)`|`<ctype.h>`|
+5|`ft_isprint`|checks if is ASCII character 32 to 126|`int ft_isprint(int c)`|`<ctype.h>`|
 6|`ft_strlen`|calculates lenght of the string|`size_t ft_strlen(const char *s)`|`<string.h>`|
 7|`ft_memset`|fills first n bytes of memory with byte c|`void *ft_memset(void *s, int c, size_t n)`|`<string.h>`|
 8|`ft_bzero`|erases the data in the n bytes of memory pointed by s|`void ft_bzero(void *s, size_t n)`|`<strings.h>`|
@@ -16,3 +16,6 @@
 13|`ft_toupper`|converts letter to uppercase|`int ft_toupper(int c)`|`<ctype.h>`|
 14|`ft_tolower`|converts letter to lowercase|`int ft_tolower(int c)`|`<ctype.h>`|
 15|`ft_strchr`|returns pointer to first occurrence of character c in the string s|`char *ft_strchr(const char *s, int c)`|`<string.h>`|
+16|`ft_strrchr`|returns pointer to last occurrence of character c in the string s|`char *ft_strrchr(const char *s, int c)`|`<string.h>`|
+17|`ft_strncmp`|compares two strings and returns a int that compares the ascii of the chars if they differ, up to size n|`int ft_strncmp(const char *s1, const char *s2, size_t n)`|`<string.h>`|
+18|`ft_memchr`|scans n bytes of memory for first instance of c, returns pointer to matching byte or NULL|`void *ft_memchr(const void *s, int c, size_t n)`|`<string.h>`|

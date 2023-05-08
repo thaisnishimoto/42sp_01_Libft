@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 18:00:21 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/05 18:08:26 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/07 20:47:39 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,11 @@ MU_TEST(search_letter_not_in_string)
 
 	int	expected = 1;
 	char	*ptr = ft_strchr(s, c);
-	if (ptr = NULL)
+	int	result;
+	if (ptr == NULL)
 		result = 1;	
 
-	mu_assert_int_eq(*expected, *result);
+	mu_assert_int_eq(expected, result);
 }
 MU_TEST_SUITE(test_suite)
 {

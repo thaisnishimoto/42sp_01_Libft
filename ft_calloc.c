@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/05 11:50:12 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/09 18:42:05 by tmina-ni         ###   ########.fr       */
+/*   Created: 2023/05/09 11:29:40 by tmina-ni          #+#    #+#             */
+/*   Updated: 2023/05/09 14:03:20 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	index;
-	size_t	slen;
+	void	*ptr;
+	size_t	i;
 
-	slen = 0;	
-	while (src[slen])
-		slen++;
-	if (size == 0)
-		return (slen);
-	index = 0;
-	while (index < size - 1 && src[index])
+	if (nmemb == 0 || size == 0 || nmemb > SIZE_MAX / size)
+		return (NULL);
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
+		return (ptr);
+	i = 0;
+	while (i < nmemb * size)
 	{
-		dst[index] = src[index];
-		index++;
+		((unsigned char *)ptr)[i] = 0;
+		i++;
 	}
-	dst[index] = '\0';
-	return (slen);
+	return (ptr);
 }

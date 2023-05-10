@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 17:21:23 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/08 13:36:46 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/10 15:39:17 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	len;
+	size_t	len;
 
-	len = ft_strlen(s) - 1;
-	while (len >= 0 && s[len] != c)
+	len = ft_strlen(s);
+	while (len > 0 && s[len] != (unsigned char)c)
 		len--;
-	if (s[len] == c)
+	if (s[len] == (unsigned char)c)
 		return ((char *)&s[len]);
 	else
 		return (NULL);

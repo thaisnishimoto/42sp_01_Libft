@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 17:21:23 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/05 17:58:02 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/10 15:07:37 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ char	*ft_strchr(const char *s, int c)
 	int		i;
 
 	i = 0;
-	while (s[i] != c && s[i])
+	while (s[i] != (unsigned char)c && s[i])
 		i++;
-	if (s[i])
+	if (s[i] == (unsigned char)c)
 		return ((char *)&s[i]);
 	else
 		return (NULL);

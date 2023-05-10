@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 23:39:08 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/09 23:49:32 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/10 01:04:09 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
-	ptr = malloc((s1 + s2) * 1);
+	ptr = malloc((s1_len + s2_len) * 1);
 	if (ptr == NULL)
 		return (NULL);
 	i = 0;

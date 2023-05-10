@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 18:00:21 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/07 20:47:39 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/10 15:16:56 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,18 @@ MU_TEST(find_O_from_string_NishimotO)
 	int	c = 'O';
 
 	const char	*expected = &s[8];
+	char	*result = ft_strchr(s, c);
+	printf("%c\n", *result);
+
+	mu_assert_int_eq(*expected, *result);
+}
+
+MU_TEST(find_last_NUL_character)
+{
+	const char	s[] = "Nishimoto";
+	int	c = '\0';
+
+	const char	*expected = &s[9];
 	char	*result = ft_strchr(s, c);
 	printf("%c\n", *result);
 
@@ -68,16 +80,18 @@ MU_TEST(search_letter_not_in_string)
 
 	int	expected = 1;
 	char	*ptr = ft_strchr(s, c);
-	int	result;
+	int	result = 0;
 	if (ptr == NULL)
 		result = 1;	
 
 	mu_assert_int_eq(expected, result);
 }
+
 MU_TEST_SUITE(test_suite)
 {
 	MU_RUN_TEST(find_a_from_string_marvin);
 	MU_RUN_TEST(find_O_from_string_NishimotO);
+	MU_RUN_TEST(find_last_NUL_character);
 	MU_RUN_TEST(find_int_5_from_string_Thai5);
 	MU_RUN_TEST(find_first_t_from_string_batata);
 	MU_RUN_TEST(search_letter_not_in_string);

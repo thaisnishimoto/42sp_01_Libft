@@ -6,34 +6,34 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 23:56:36 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/10 01:18:02 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/10 11:44:13 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-#include <string.h>
 
-void	ft_trim_end(char *ptr, char const *set);
+void	ft_trim_right(char *ptr, const char *set);
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
 	int	i;
 	size_t	j;
 	char	*ptr;
 
-	ptr = malloc(strlen(s1) * 1);
-	//if ptr == NULL
+	ptr = malloc(ft_strlen(s1) * 1);
+	if (ptr == NULL)
+		return (NULL);
 	i = 0;
 	while (s1[i])
 	{
 		j = 0;
-		while (j < strlen(set))
+		while (j < ft_strlen(set))
 		{
 			if (s1[i] != set[j])
 				j++;
 			else
-				break
+				break;
 		}
 		if (s1[i] != set[j])
 		{
@@ -43,20 +43,20 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	}
 	printf("%s\n", &ptr[0]);
-	ft_trim_end(&ptr[0], set);
+	ft_trim_right(&ptr[0], set);
 	return (&ptr[0]);
 }
 
-void	ft_trim_end(char *ptr, char const *set)
+void	ft_trim_right(char *ptr, const char *set)
 {
 	int	len;
 	size_t	j;
 
-	len = strlen(ptr) - 1;
+	len = ft_strlen(ptr) - 1;
 	while (len >= 0)
 	{
 		j = 0;
-		while (j < strlen(set))
+		while (j < ft_strlen(set))
 		{
 			if (ptr[len] == set[j])
 				ptr[len] = '\0';
@@ -67,16 +67,4 @@ void	ft_trim_end(char *ptr, char const *set)
 		else
 			return ;
 	}
-}
-
-int	main(void)
-{
-	char untrim[] = "    Hello World   ";
-	char set[] = " ";
-	char	*result;
-	
-	printf("%s\n", untrim);
-	result = ft_strtrim(untrim, set);
-	printf("%s\n", result);
-	return (0);
 }

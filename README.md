@@ -26,4 +26,6 @@
 |`ft_strdup`|returns  a pointer to a new string which is a duplicate of the string s, memory for new string allocated with malloc|`char *ft_strdup(const char *s)`|`<string.h>`|
 
 |Function - Part 2|Description|Prototype|Original library|
-|`ft_substr`|allocates and returns substring from string s, substring begins at start and is of max size len|`char *ft_substr(char const *s, unsigned int start, size_t len)`|`<string.h>`|
+|`ft_substr`|allocates and returns substring from string s, substring begins at start and is of max size len|`char *ft_substr(char const *s, unsigned int start, size_t len)`|noit standard C lib|
+|`ft_strjoin`|allocates memory and returns new string with concatenation of s1 and s2|`char *ft_strjoin(char const *s1, char const *s2)`|not standard C lib|
+|`ft_strtrim`|allocates memory and returns copy of s1, with chars in set removed from beginning and end of s1|`char *ft_strtrim(char const *s1, char const *set)`|not standard C lib|

@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:19:06 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/10 15:57:56 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/12 14:54:02 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 # include <stdlib.h> //malloc, size_t
 # include <stdint.h> //SIZE_MAX
+# include <string.h> //strdup
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -41,6 +42,8 @@ int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
+char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s1, const char *set);
+char	*ft_strtrim2(const char *s1, const char *set);
 
 #endif 

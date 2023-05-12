@@ -1,70 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim3.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 23:56:36 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/10 11:44:13 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/12 20:01:20 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-void	ft_trim_right(char *ptr, const char *set);
-
 char	*ft_strtrim(const char *s1, const char *set)
 {
-	int	i;
-	size_t	j;
+	size_t	count_left;
+	size_t	count_right;
+	size_t	trim_len;
 	char	*ptr;
 
-	ptr = malloc(ft_strlen(s1) * 1);
-	if (ptr == NULL)
+	if (s1 == NULL || set == NULL)
 		return (NULL);
-	i = 0;
-	while (s1[i])
-	{
-		j = 0;
-		while (j < ft_strlen(set))
-		{
-			if (s1[i] != set[j])
-				j++;
-			else
-				break;
-		}
-		if (s1[i] != set[j])
-		{
-			while (s1[i])
-				*ptr++ = s1[i++];
-		}
-		i++;
-	}
-	printf("%s\n", &ptr[0]);
-	ft_trim_right(&ptr[0], set);
-	return (&ptr[0]);
-}
-
-void	ft_trim_right(char *ptr, const char *set)
-{
-	int	len;
-	size_t	j;
-
-	len = ft_strlen(ptr) - 1;
-	while (len >= 0)
-	{
-		j = 0;
-		while (j < ft_strlen(set))
-		{
-			if (ptr[len] == set[j])
-				ptr[len] = '\0';
-			j++;
-		}
-		if (ptr[len] == '\0')
-			len--;
-		else
-			return ;
-	}
+	count_left = 0;
+	while (ft_strchr(set, s1[count_left]))
+		count_left++;
+	count_right = ft_strlen(s1) - 1;
+	while (ft_strrchr(set, s1[count_right]))
+		count_right--;
+	trim_len = count_right - count_left;
+	ptr = malloc((trim_len + 1)* sizeof(char));
+	ft_strlcpy(ptr, &s1[count_left], trim_len);
+	return (ptr);	
 }

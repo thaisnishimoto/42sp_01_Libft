@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 18:00:21 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/10 15:16:56 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/12 17:21:01 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,18 @@ MU_TEST(search_letter_not_in_string)
 	mu_assert_int_eq(expected, result);
 }
 
+//MU_TEST(c_is_more_than_a_single_char)
+//{
+//	const char	s[] = "marvin";
+//	int	c = "vr";
+//
+//	const char	*expected = &s[2];
+//	char	*result = ft_strchr(s, c);
+//	printf("%c\n", *result);
+//
+//	mu_assert_int_eq(expected, result);
+//}
+
 MU_TEST_SUITE(test_suite)
 {
 	MU_RUN_TEST(find_a_from_string_marvin);
@@ -95,6 +107,7 @@ MU_TEST_SUITE(test_suite)
 	MU_RUN_TEST(find_int_5_from_string_Thai5);
 	MU_RUN_TEST(find_first_t_from_string_batata);
 	MU_RUN_TEST(search_letter_not_in_string);
+	//MU_RUN_TEST(c_is_more_than_a_single_char);
 }
 
 int	main(void)

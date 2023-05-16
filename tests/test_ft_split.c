@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:00:56 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/15 17:36:35 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/16 13:41:08 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ MU_TEST(should_divide_2_strings_delimited_by_double_char)
 {
 	char	delimiter = ',';
 	char	string[] = "aaa,,bbb";
-	char	*expected[] = {"aaa", "", "bbb"};
+	char	*expected[] = {"aaa", "bbb"};
 	char	**result;
 
 	result = ft_split(string, delimiter);
@@ -66,11 +66,8 @@ MU_TEST(should_divide_2_strings_delimited_by_double_char)
 	printf("\n%s\n", result[0]);
 	mu_assert_string_eq(expected[1], result[1]);
 	printf("\n%s\n", result[1]);
-	mu_assert_string_eq(expected[2], result[2]);
-	printf("\n%s\n", result[2]);
 	free(result[0]);
 	free(result[1]);
-	free(result[2]);
 	free(result);
 }
 

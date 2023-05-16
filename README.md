@@ -30,3 +30,4 @@
 |`ft_strjoin`|allocates memory and returns new string with concatenation of s1 and s2|`char *ft_strjoin(char const *s1, char const *s2)`|not standard C lib|
 |`ft_strtrim`|allocates memory and returns copy of s1, with chars in set removed from beginning and end of s1|`char *ft_strtrim(char const *s1, char const *set)`|not standard C lib|
 |`ft_split`|allocates memory and returns array of strings by splitting s using a delimiter|`char **ft_split(char const *s, char c)`|not standard C lib|
+|`ft_itoa`|allocates memory and returns a string representing the int received as argument|`char *ft_itoa(int n)`|not standard C lib|

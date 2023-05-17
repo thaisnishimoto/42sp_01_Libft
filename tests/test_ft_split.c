@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:00:56 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/16 13:41:08 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/17 16:17:30 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,11 +71,28 @@ MU_TEST(should_divide_2_strings_delimited_by_double_char)
 	free(result);
 }
 
+MU_TEST(should_return_NULL)
+{
+	char	delimiter = ',';
+	char	*string = NULL;
+	int	expected = 1;
+	char	**result;
+	int	res = 0;
+
+	result = ft_split(string, delimiter);
+	if (result == NULL)
+		res = 1;		
+
+	mu_assert_int_eq(expected, res);
+	printf("\n%s\n", result[0]);
+}
+
 MU_TEST_SUITE(test_suite)
 {
 	MU_RUN_TEST(should_divide_chars_delimited_by_num_1);
 	MU_RUN_TEST(should_divide_3_strings_delimited_by_comma);
 	MU_RUN_TEST(should_divide_2_strings_delimited_by_double_char);
+	MU_RUN_TEST(should_return_NULL);
 }
 
 int	main(void)

@@ -31,5 +31,5 @@
 |`ft_strtrim`|allocates memory and returns copy of s1, with chars in set removed from beginning and end of s1|`char *ft_strtrim(char const *s1, char const *set)`|not standard C lib|
 |`ft_split`|allocates memory and returns array of strings by splitting s using a delimiter|`char **ft_split(char const *s, char c)`|not standard C lib|
 |`ft_itoa`|allocates memory and returns a string representing the int received as argument|`char *ft_itoa(int n)`|not standard C lib|
-|`ft_strmapi`|allocates memory and returns a string resulting from applications of f to each character of s|`char *ft_strmapi(char const *s, char (*f)(unsigned
-int, char)`|not standard C lib|
+|`ft_strmapi`|allocates memory and returns a string resulting from applications of f to each character of s|`char *ft_strmapi(char const *s, char (*f)(unsigned int, char))`|not standard C lib|
+|`ft_striteri`|applies f to each character of s and modify using the address to the character|`void ft_striteri(char *s, void (*f)(unsigned int, char*))`|not standard C lib|

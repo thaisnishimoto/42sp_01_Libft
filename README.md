@@ -33,3 +33,7 @@
 |`ft_itoa`|allocates memory and returns a string representing the int received as argument|`char *ft_itoa(int n)`|not standard C lib|
 |`ft_strmapi`|allocates memory and returns a string resulting from applications of f to each character of s|`char *ft_strmapi(char const *s, char (*f)(unsigned int, char))`|not standard C lib|
 |`ft_striteri`|applies f to each character of s and modify using the address to the character|`void ft_striteri(char *s, void (*f)(unsigned int, char*))`|not standard C lib|
+|`ft_putchar_fd`|Writes character ’c’ to the given file descriptor|`void ft_putchar_fd(char c, int fd)`|not standard C lib|
+|`ft_putstr_fd`|Writes string ’s’ to the given file descriptor|`void ft_putstr_fd(char *s, int fd)`|not standard C lib|
+|`ft_putendl_fd`|Writes string ’s’ to the given file descriptor, followed by new line|`void ft_putendl_fd(char *s, int fd)`|not standard C lib|
+|`ft_putnbr_fd`|Writes integer ’n’ to the given file descriptor|`void ft_putnbr_fd(int n, int fd)`|not standard C lib|

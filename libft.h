@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:19:06 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/17 12:06:50 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/17 15:37:52 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@
 # include <stdlib.h> //malloc, size_t
 # include <stdint.h> //SIZE_MAX
 # include <string.h> //strdup
+# include <unistd.h> //write
+# include <unistd.h> //write
+# include <sys/types.h> //open
+# include <sys/stat.h> //open
+# include <fcntl.h> //open
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -48,5 +53,9 @@ char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif 

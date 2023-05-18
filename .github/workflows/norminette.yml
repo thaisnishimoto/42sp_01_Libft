@@ -8,7 +8,9 @@ on:
 jobs:
   norminette:
     runs-on: ubuntu-latest
-        
+     defaults:
+      run:
+        working-directory: srcs   
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python

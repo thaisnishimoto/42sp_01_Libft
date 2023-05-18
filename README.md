@@ -37,3 +37,6 @@
 |`ft_putstr_fd`|Writes string ’s’ to the given file descriptor|`void ft_putstr_fd(char *s, int fd)`|not standard C lib|
 |`ft_putendl_fd`|Writes string ’s’ to the given file descriptor, followed by new line|`void ft_putendl_fd(char *s, int fd)`|not standard C lib|
 |`ft_putnbr_fd`|Writes integer ’n’ to the given file descriptor|`void ft_putnbr_fd(int n, int fd)`|not standard C lib|
+
+|Function - Bonus Part|Description|Prototype|Original library|
+|`ft_lstnew`|Returns new node with member content initialized to value of the parameter and next initialized to NULL|`t_list *ft_lstnew(void *content)`|not standard C lib|

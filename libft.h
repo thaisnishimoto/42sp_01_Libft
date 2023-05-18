@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:19:06 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/17 15:37:52 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/18 13:44:11 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 # define LIBFT_H
 
-# include <stdlib.h> //malloc, size_t
+# include <stdlib.h> //malloc, size_t, NULL
 # include <stdint.h> //SIZE_MAX
 # include <string.h> //strdup
 # include <unistd.h> //write
@@ -22,6 +22,12 @@
 # include <sys/types.h> //open
 # include <sys/stat.h> //open
 # include <fcntl.h> //open
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -57,5 +63,6 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+t_list	*ft_lstnew(void *content);
 
 #endif 

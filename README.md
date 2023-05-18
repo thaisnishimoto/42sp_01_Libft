@@ -39,4 +39,5 @@
 |`ft_putnbr_fd`|Writes integer ’n’ to the given file descriptor|`void ft_putnbr_fd(int n, int fd)`|not standard C lib|
 
 |Function - Bonus Part|Description|Prototype|Original library|
-|`ft_lstnew`|Returns new node with member content initialized to value of the parameter and next initialized to NULL|`t_list *ft_lstnew(void *content)`|not standard C lib|
+|`ft_lstnew`|Returns new node with member content malloced to value of the parameter and next initialized to NULL|`t_list *ft_lstnew(void *content)`|not standard C lib|
+|`ft_lstadd_front`|Adds a new node at the beginning of the list|`void ft_lstadd_front(t_list **lst, t_list *new)`|not standard C lib|

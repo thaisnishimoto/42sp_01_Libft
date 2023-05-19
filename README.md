@@ -43,3 +43,4 @@
 |`ft_lstadd_front`|Adds a new node at the beginning of the list|`void ft_lstadd_front(t_list **lst, t_list *new)`|not standard C lib|
 |`ft_lstsize`|Counts number of nodes in a list|`int ft_lstsize(t_list *lst)`|not standard C lib|
 |`ft_lstlast`|Returns the last node of the list|`t_list *ft_lstlast(t_list *lst)`|not standard C lib|
+|`ft_lstadd_back`|Adds a new node at the end of the list|`void ft_lstadd_back(t_list **lst, t_list *new)`|not standard C lib|

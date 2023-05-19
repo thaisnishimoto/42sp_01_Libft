@@ -6,7 +6,7 @@
 #    By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 10:48:14 by tmina-ni          #+#    #+#              #
-#    Updated: 2023/05/11 12:36:29 by tmina-ni         ###   ########.fr        #
+#    Updated: 2023/05/19 15:59:32 by tmina-ni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ test_%:
 	$(CC) $(CFLAGS) $@.c -L.. -lft -lrt -lm -o program 
 	./program
 	rm -f program
+	rm -f *.o
 
 clean:
 	rm -f *.o

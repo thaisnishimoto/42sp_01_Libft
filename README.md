@@ -44,3 +44,4 @@
 |`ft_lstsize`|Counts number of nodes in a list|`int ft_lstsize(t_list *lst)`|not standard C lib|
 |`ft_lstlast`|Returns the last node of the list|`t_list *ft_lstlast(t_list *lst)`|not standard C lib|
 |`ft_lstadd_back`|Adds a new node at the end of the list|`void ft_lstadd_back(t_list **lst, t_list *new)`|not standard C lib|
+|`ft_lstadd_back`|Frees the memory of a node’s content using the function ’del’. The memory of ’next’ must not be freed|`void ft_lstdelone(t_list *lst, void (*del)(void*))`|not standard C lib|

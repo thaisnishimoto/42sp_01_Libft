@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 18:24:12 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/19 18:30:12 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/22 11:42:19 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	del(lst->content);
-	free(lst);
+	if (lst != NULL)
+	{
+		del(lst->content);
+		free(lst);
+	}
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_lstdelone.c                                :+:      :+:    :+:   */
+/*   test_ft_lstmap.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:00:56 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/22 12:04:17 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/22 17:18:33 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,38 +19,33 @@ void	del(void *content)
 	free(content);
 }
 
+void	*add_one(void *str)
+{
+	void	*
+}
+
 MU_TEST(should_return_content_of_last_node_without_a_node_in_the_middle)
 {
-	t_list    *head = NULL;
+	t_list    *head;
 	t_list    *ptr;
+	t_list    *result;
 
-	head = malloc(sizeof(t_list));
-	head->content = "1";
-	head->next = NULL;
+	head = ft_lstnew(ft_strdup("1"));
 	ptr = ft_lstnew(ft_strdup("2"));
 	ft_lstadd_back(&head->next, ptr); 
 	ptr = ft_lstnew(ft_strdup("3"));
 	ft_lstadd_back(&head->next->next, ptr);
 	ptr = ft_lstnew(ft_strdup("4"));
 	ft_lstadd_back(&head->next->next->next, ptr);
-	ptr = head;
+	result = ft_lstmap(head, add_one, del);
+	ptr = result;
 	while (ptr)
 	{
-		printf("Before:\n%s\n", (char *)ptr->content);
-		ptr = ptr->next;
-	}
-	ptr = head;
-	ft_lstdelone(head->next->next, del);
-	while (ptr->next)
-	{
-		if(ptr->content)
-			printf("After:\n%s\n", (char *)ptr->content);
-		else
-			printf("After:\n%s\n", "NULL");
+		printf("%s\n", (char *)ptr->content);
 		ptr = ptr->next;
 	}
 	char	expected[] = "2";
-	mu_assert_string_eq(expected, (char *)head->next->content);
+	mu_assert_string_eq(expected, (char *)result->content);
 }
 
 MU_TEST_SUITE(test_suite)

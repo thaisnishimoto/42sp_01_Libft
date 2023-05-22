@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 23:56:36 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/15 14:50:21 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/22 17:50:18 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ char	*ft_strtrim(const char *s1, const char *set)
 	if (ptr == NULL)
 		return (NULL);
 	ft_strlcpy(ptr, &s1[start], trim_len + 1);
-	return (ptr);	
+	return (ptr);
 }

@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:19:06 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/22 13:43:18 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/23 16:49:11 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,6 @@
 # include <limits.h> //INT_MAX
 # include <string.h> //strdup
 # include <unistd.h> //write
-# include <unistd.h> //write
-# include <sys/types.h> //open
-# include <sys/stat.h> //open
-# include <fcntl.h> //open
 
 typedef struct s_list
 {

@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 18:00:21 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/09 16:26:13 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/23 15:09:04 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ MU_TEST(test_change_string)
 	char	dest[] = "destino";
 
 	char	expected[] = "fontino";
-	void	*result = ft_memmove(dest, src, 3);
+	void	*result = ft_memcpy(dest, src, 3);
 	printf("%s\n", dest);
 
 	mu_assert_string_eq(expected, result);
@@ -35,7 +35,7 @@ MU_TEST(test_array_of_num)
 	while (i < 3)
 		printf("%d", dest[i++]);
 	int	expected[] = {9, 2, 2}; //changed only 2 bytes of int 9
-	void	*result = ft_memmove(dest, src, 2);
+	void	*result = ft_memcpy(dest, src, 2);
 	i = 0;
 	while (i < 3)
 		printf("%d", dest[i++]);
@@ -50,7 +50,7 @@ MU_TEST(test_empty_dest)
 	int	i = 0;
 
 	int	expected[] = {1, 9};
-	void	*result = ft_memmove(dest, src, 8);
+	void	*result = ft_memcpy(dest, src, 8);
 	i = 0;
 	while (i < 2)
 		printf("%d, ", dest[i++]);

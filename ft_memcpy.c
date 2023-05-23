@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:17:19 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/09 23:30:25 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/23 14:12:35 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	index;
 
+	if (dest == 0 && src == 0)
+		return (NULL);
 	index = 0;
 	while (index < n)
 	{

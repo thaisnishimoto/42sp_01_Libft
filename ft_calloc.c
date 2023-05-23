@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:29:40 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/17 14:56:53 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/05/23 15:46:36 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
+	size_t	total_size;
 	size_t	i;
 
-	if (nmemb > SIZE_MAX || size > SIZE_MAX || (nmemb * size) > SIZE_MAX)
+	total_size = nmemb * size;
+	if (total_size && nmemb > total_size / size)
 		return (NULL);
-	ptr = malloc(sizeof(char) * (nmemb * size));
+	ptr = malloc(total_size);
 	if (ptr == NULL)
 		return (NULL);
 	i = 0;
-	while (i < nmemb * size)
+	while (i < total_size)
 	{
 		((unsigned char *)ptr)[i] = 0;
 		i++;

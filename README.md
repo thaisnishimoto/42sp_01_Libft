@@ -1,6 +1,7 @@
 #Functions
 
 | Function - Part 1 | Description | Prototype | Original library |
+|---|---|---|---|
 | `ft_isalpha` | checks for alphabetic character | `int ft_isalpha(int c)` | `<ctype.h>` |
 | `ft_isdigit` | checks for digit 0 through 9 | `int ft_isdigit(int c)` | `<ctype.h>` |
 | `ft_isalnum`|checks for alphanumeric character|`int ft_isalnum(int c)`|`<ctype.h>`|

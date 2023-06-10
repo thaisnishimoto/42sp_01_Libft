@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:19:06 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/23 16:49:11 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/06/10 19:31:08 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,20 @@
 
 # define LIBFT_H
 
-# include <stdlib.h> //malloc, size_t, NULL
+# include <stdlib.h> //malloc, free, size_t, NULL
 # include <stdint.h> //SIZE_MAX
 # include <limits.h> //INT_MAX
 # include <string.h> //strdup
-# include <unistd.h> //write
+# include <unistd.h> //write, read
+# include <stdio.h> //printf
+# include <fcntl.h> //open, close
+
+# define MAX_FD 1024 //gnl
+
+//gnl
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 typedef struct s_list
 {
@@ -69,5 +78,8 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+//new functions added
+char	*get_next_line(int fd);
 
 #endif 

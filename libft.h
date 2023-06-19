@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:19:06 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/06/10 19:31:08 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/06/19 12:52:47 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 //new functions added
-char	*get_next_line(int fd);
+char	*ft_get_next_line(int fd);
+char	*ft_utoa(unsigned int n);
 
 #endif 

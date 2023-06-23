@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:19:06 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/06/19 12:52:47 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/06/23 18:02:17 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,20 @@
 # include <stdio.h> //printf
 # include <fcntl.h> //open, close
 
-# define MAX_FD 1024 //gnl
-
-//gnl
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
+#  define BUFFER_SIZE 42 //gnl
+# endif
+
+# ifndef MAX_FD
+#  define MAX_FD 1024 //gnl bonus
+# endif
+
+# ifndef LOW_HEXBASE
+#  define LOW_HEXBASE "0123456789abcdef" //printf %x
+# endif
+
+# ifndef UPP_HEXBASE
+#  define UPP_HEXBASE "0123456789ABCDEF" //printf %X
 # endif
 
 typedef struct s_list
@@ -82,5 +91,17 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 //new functions added
 char	*ft_get_next_line(int fd);
 char	*ft_utoa(unsigned int n);
+char	*ft_utoa_base(unsigned long lnb, char *base);
+//int             ft_printf(const char *str, ...);
+
+//printf utils
+//int             ft_printlen(const char *str);
+//int             ft_print_char(va_list args);
+//int             ft_print_str(va_list args);
+//int             ft_print_nbr(va_list args, const char format, char *flag_buffer);
+//int             ft_printnbr_base16(va_list args, char *base, char *flag_buffer);
+//int             ft_print_ptr(va_list args);
+//int             ft_check_flags(const char *format);
+//char    *ft_get_flag(const char *format);
 
 #endif 

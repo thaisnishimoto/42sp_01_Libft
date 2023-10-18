@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 18:00:21 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/10 14:33:56 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/10/18 00:56:04 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ MU_TEST(test_change_string)
 	const char	src[] = "Nishimoto";
 	char	dest[11] = "Thais ";
 
-	char	expected[] = "Thais Nis\0";
+	char	expected[] = "Thais Nish\0";
 	ft_strlcat(dest, src, size);
 	printf("%s\n", dest);
 

@@ -6,12 +6,11 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 12:57:41 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/05/10 14:40:26 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/10/18 00:47:57 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

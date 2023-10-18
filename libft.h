@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:19:06 by tmina-ni          #+#    #+#             */
-/*   Updated: 2023/09/28 19:03:00 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2023/10/18 00:45:43 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,7 @@ char	*ft_utoa(unsigned int n);
 char	*ft_utoa_base(unsigned long lnb, char *base);
 int		ft_printf(const char *str, ...);
 char	*ft_str_rm_dup(char *str, char c);
+void	ft_swap(int *a, int *b);
 
 //printf utils
 int		ft_printlen(const char *str);

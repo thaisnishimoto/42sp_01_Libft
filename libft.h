@@ -6,7 +6,7 @@
 /*   By: tmina-ni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:19:06 by tmina-ni          #+#    #+#             */
-/*   Updated: 2024/04/10 16:17:25 by tmina-ni         ###   ########.fr       */
+/*   Updated: 2024/04/10 16:28:52 by tmina-ni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ char	*ft_utoa_base(unsigned long lnb, char *base);
 int		ft_printf(const char *str, ...);
 char	*ft_str_rm_dup(char *str, char c);
 void	ft_swap(int *a, int *b);
-int	ft_strcmp(char *s1, char *s2);
+int		ft_strcmp(char *s1, char *s2);
 void	ft_free_matrix(char **array);
 
 //printf utils
